@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student List - Horror Edition</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <div class="main">
+        <h1>👻 The Haunted Student List 👻</h1>
+        {% if student %}
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Phone</th>
+                        <th>Email</th>
+                        <th>Roll No</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in student %}
+                    <tr>
+                        <td>{{ i.name }}</td>
+                        <td>{{ i.phone }}</td>
+                        <td>{{ i.email }}</td>
+                        <td>{{ i.roll }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+            <p class="no-data">No souls... I mean students found! 😱</p>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+/* Import Horror Font */
+@import url('https://fonts.googleapis.com/css2?family=Creepster&display=swap');
+
+body {
+    font-family: 'Creepster', cursive;
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Main Container */
+.main {
+    background: #222;
+    width: 70%;
+    padding: 20px;
+    border: 5px solid red;
+    box-shadow: 0px 0px 20px red;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* Centering the Table */
+.table-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #111;
+    border: 3px solid darkred;
+}
+
+th, td {
+    border: 2px solid red;
+    padding: 12px;
+    text-align: center;
+    color: white;
+}
+
+th {
+    background-color: darkred;
+    color: yellow;
+    font-size: 20px;
+}
+
+tr:nth-child(even) {
+    background-color: #300;
+}
+
+tr:nth-child(odd) {
+    background-color: #400;
+}
+
+/* Spooky Hover Effect */
+tr:hover {
+    background-color: black;
+    color: red;
+    transition: 0.3s;
+}
+
+/* No Data Message */
+.no-data {
+    color: red;
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 2px 2px black;
+}
+
+/* Bloody Text Animation */
+h1 {
+    color: red;
+    font-size: 40px;
+    text-shadow: 2px 2px black;
+    animation: blood-drip 2s infinite alternate;
+}
+
+@keyframes blood-drip {
+    0% { text-shadow: 2px 2px black; }
+    100% { text-shadow: 5px 5px red; }
+}
